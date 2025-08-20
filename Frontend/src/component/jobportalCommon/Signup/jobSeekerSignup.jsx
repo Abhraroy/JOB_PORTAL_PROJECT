@@ -9,7 +9,7 @@ function JobSeekerSignup() {
       e.preventDefault()
       const email = e.target.email.value
       const password = e.target.confirmPassword.value
-      const response = await axios.post("http://localhost:5000/api/v1/findJob/auth/register",{email,password})
+      const response = await axios.post("/api/v1/findJob/auth/register",{email,password})
       console.log(response)
       const token = response.data.token
       localStorage.setItem("token",token)
