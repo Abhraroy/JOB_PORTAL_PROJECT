@@ -123,7 +123,7 @@ router.post("/createorgProfile",requireAuth(
 
 
 router.put("/updateOrgProfile",requireAuth(
-  {acceptedOrigins:["http://localhost:5173"]}
+  
 ),async(req,res)=>{
   console.log("Hitting the update route")
   const{companyName,companyEmail,companyPhone,companyWebsite,companyAddress,companyCity,companyState,companyCountry,companyDescription} = req.body
@@ -212,7 +212,7 @@ router.get("/getJobs",requireAuth(),async(req,res)=>{
 
 
 router.get("/viewApplicants/:jobId",requireAuth(
-  // {acceptedOrigins:["http://localhost:5173"]}
+  
 ),async(req,res)=>{
   const isAuthenticated = req.auth.isAuthenticated
   const org_id = req.auth.userId
@@ -296,7 +296,7 @@ router.get("/viewApplicants/:jobId",requireAuth(
 
 
 router.get("/getJobs/:jobId",requireAuth(
-  {acceptedOrigins:["http://localhost:5173"]}
+ 
 ),async(req,res)=>{
   const isAuthenticated = req.auth.isAuthenticated
   const org_id = req.auth.userId
@@ -316,7 +316,7 @@ router.get("/getJobs/:jobId",requireAuth(
 })
 
 router.put("/updateJob/:jobId",requireAuth(
-  {acceptedOrigins:["http://localhost:5173"]} 
+ 
 ),async(req,res)=>{
   const{title,description,lastDate,address,jobCategory,jobType,jobLocation,experienceLevel,skillsRequired,salaryRange,openings,status} = req.body
   const isAuthenticated = req.auth.isAuthenticated

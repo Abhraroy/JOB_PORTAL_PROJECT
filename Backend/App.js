@@ -17,7 +17,12 @@ const app = express();
 app.use(cors(
     {
         credentials:true,
-        origin:"https://job-portal-project-sable.vercel.app"
+         origin:"https://job-portal-project-sable.vercel.app" 
+      
+
+        
+
+        
     }
 ))
 

@@ -24,7 +24,7 @@ function JobDetailPage() {
     const fetchJob = async()=>{
         try{
             console.log("jobId",jobId)
-            const response = await axios.get(`http://localhost:5000/api/v1/findJob/jobs/${jobId}`,{
+            const response = await axios.get(`/api/v1/findJob/jobs/${jobId}`,{
                 headers:{
                     Authorization: `Bearer ${token}`,
                 },

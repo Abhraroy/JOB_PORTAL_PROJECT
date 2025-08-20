@@ -28,7 +28,7 @@ function UserProfile() {
             if (!token) {
                 navigate("/")
             }
-            const response = await axios.get("http://localhost:5000/api/v1/findJob/user/profile", {
+            const response = await axios.get("/api/v1/findJob/user/profile", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

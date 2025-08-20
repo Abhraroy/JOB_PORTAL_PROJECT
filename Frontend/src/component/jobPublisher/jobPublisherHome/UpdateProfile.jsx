@@ -128,7 +128,7 @@ function UpdateProfile() {
       // You'll handle the backend - this is just the frontend structure
       console.log('Profile data to update:', formData)
       const token = await getToken(); // 🔹 Get Clerk JWT
-      const response = await axios.put("http://localhost:5000/api/v1/publishJob/updateOrgProfile", formData, {
+      const response = await axios.put("/api/v1/publishJob/updateOrgProfile", formData, {
         headers: {
           Authorization: `Bearer ${token}`, // 🔹 Send token
           'Cache-Control': 'no-cache',

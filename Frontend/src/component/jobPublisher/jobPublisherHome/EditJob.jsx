@@ -108,7 +108,7 @@ function EditJob() {
             }
             console.log('Submitting data:', submitData)
             
-            const response = await axios.put(`http://localhost:5000/api/v1/publishJob/updateJob/${jobId}`, submitData, {
+            const response = await axios.put(`/api/v1/publishJob/updateJob/${jobId}`, submitData, {
                 withCredentials: true,
             })
             
