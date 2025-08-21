@@ -42,7 +42,7 @@ app.use("/api/v1/publishJob",jobPublisherRoutes)
 app.use(express.json())
 app.use("/api/v1/findJob",jobSeekerRoutes)
 
-// app.get("/",(req,res)=>{
-//     res.send("Hello World")
-// })
+app.get("/",(req,res)=>{
+    res.send("Hello World")
+})
 
